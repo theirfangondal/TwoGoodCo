@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Style the button */
+        .shop-button {
+            background-color: #f1f1f1;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+
+        /* Style the hidden content (initially hidden) */
+        .shop-content {
+            display: none;
+            padding: 0 18px;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+
+        /* Change background color on hover */
+        .shop-button:hover {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <button class="shop-button">Shop</button>
+    <div class="shop-content">
+        <!-- Add your shop-related content here -->
+        <p>Products, categories, and more...</p>
+    </div>
+
+    <script>
+        // Toggle visibility of the content when the button is clicked
+        const shopButton = document.querySelector('.shop-button');
+        const shopContent = document.querySelector('.shop-content');
+
+        shopButton.addEventListener('click', () => {
+            shopContent.style.display = shopContent.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
+</body>
+</html>
